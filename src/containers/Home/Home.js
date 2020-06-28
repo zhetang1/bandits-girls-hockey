@@ -79,7 +79,7 @@ const sidebar = {
         { title: 'April 1999', url: '#' },
     ],
     social: [
-        { name: 'GitHub', icon: GitHubIcon },
+        // { name: 'GitHub', icon: GitHubIcon },
         { name: 'Twitter', icon: TwitterIcon },
         { name: 'Facebook', icon: FacebookIcon },
     ],
@@ -111,7 +111,7 @@ export default function Home() {
                     </Grid>
                 </main>
             </Container>
-            <Footer title="Footer" description="Something here to give the footer a purpose!" />
+            <Footer title="Bandits Girls Hockey" description="Ice Vault NJ" />
         </>
     );
 }
