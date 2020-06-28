@@ -12,6 +12,7 @@ import FeaturedPost from './FeaturedPost';
 import Main from './Main';
 import Sidebar from './Sidebar';
 import Footer from './Footer';
+import backgroundImage from '../../images/2020-02-23_07-09-31_821.jpeg';
 
 const useStyles = makeStyles((theme) => ({
     mainGrid: {
@@ -20,23 +21,23 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const sections = [
-    { title: 'Technology', url: '#' },
-    { title: 'Design', url: '#' },
-    { title: 'Culture', url: '#' },
-    { title: 'Business', url: '#' },
-    { title: 'Politics', url: '#' },
-    { title: 'Opinion', url: '#' },
-    { title: 'Science', url: '#' },
-    { title: 'Health', url: '#' },
-    { title: 'Style', url: '#' },
-    { title: 'Travel', url: '#' },
+    { title: 'News', url: '#' },
+    { title: 'Videos', url: '#' },
+    { title: 'Photos', url: '#' },
+    { title: 'Schedule', url: '#' },
+    { title: 'Team', url: '#' },
+    { title: 'Stats', url: '#' },
+    { title: 'Standings', url: '#' },
+    { title: 'Fans', url: '#' },
+    { title: 'Ice Vault', url: '#' },
+    { title: 'Contact Us', url: '#' },
 ];
 
 const mainFeaturedPost = {
-    title: 'Title of a longer featured blog post',
+    title: '14U Girls Team for the 2020 - 2021 Season',
     description:
-        "Multiple lines of text that form the lede, informing new readers quickly and efficiently about what's most interesting in this post's contents.",
-    image: 'https://source.unsplash.com/random',
+        "Looking forward for the new season!",
+    image: backgroundImage,
     imgText: 'main image description',
     linkText: 'Continue reading…',
 };
@@ -91,7 +92,7 @@ export default function Home() {
         <>
             <CssBaseline />
             <Container maxWidth="lg">
-                <Header title="Blog" sections={sections} />
+                <Header title="Bandits Girls Hockey" sections={sections} />
                 <main>
                     <MainFeaturedPost post={mainFeaturedPost} />
                     <Grid container spacing={4}>
