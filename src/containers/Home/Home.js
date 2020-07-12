@@ -13,6 +13,7 @@ import Main from './Main';
 import Sidebar from './Sidebar';
 import Footer from './Footer';
 import backgroundImage from '../../images/2020-02-23_07-09-31_821.jpeg';
+import video from '../../images/2019-12-22_10-32-13_000.MOV';
 
 const useStyles = makeStyles((theme) => ({
     mainGrid: {
@@ -101,7 +102,12 @@ export default function Home() {
                         ))}
                     </Grid>
                     <Grid container spacing={5} className={classes.mainGrid}>
-                        <Main title="From the firehose" />
+                        <Main title="From the north pole" />
+                        <video
+                            controls
+                            autoPlay
+                            src='https://s3.amazonaws.com/codecademy-content/courses/React/react_video-fast.mp4'
+                        />
                         <Sidebar
                             title={sidebar.title}
                             description={sidebar.description}
