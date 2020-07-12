@@ -1,0 +1,11 @@
+{
+    "AppSyncApiName": "edify",
+    "DynamoDBBillingMode": "PAY_PER_REQUEST",
+    "DynamoDBEnableServerSideEncryption": "false",
+    "AuthCognitoUserPoolId": {
+        "Fn::GetAtt": [
+            "authedify041bfe5e",
+            "Outputs.UserPoolId"
+        ]
+    }
+}

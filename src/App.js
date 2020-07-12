@@ -36,9 +36,24 @@ const videoJsOptions = {
     }]
 }
 
+const videoOnDemandJsOptions = {
+    autoplay: true,
+    controls: true,
+    sources: [{
+        src: `https://${awsvideoconfig.awsOutputVideo}/2019-12-22_10-32-13_000/2019-12-22_10-32-13_000.m3u8`,
+    }]
+}
+
 function App() {
     return (
         <div>
+            <nav style={nav}>
+                <p style={navHeading}>Recorded Video</p>
+            </nav>
+            <div style={container}>
+                <VideoPlayer { ...videoOnDemandJsOptions } />
+            </div>
+
             <nav style={nav}>
                 <p style={navHeading}>Live Streaming with Zhe</p>
             </nav>

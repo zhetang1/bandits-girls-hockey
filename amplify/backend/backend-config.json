@@ -4,6 +4,51 @@
 			"service": "video",
 			"serviceType": "livestream",
 			"providerPlugin": "awscloudformation"
+		},
+		"myvodstreams": {
+			"service": "video",
+			"serviceType": "video-on-demand",
+			"providerPlugin": "awscloudformation"
+		}
+	},
+	"auth": {
+		"edify041bfe5e": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": []
+		},
+		"userPoolGroups": {
+			"service": "Cognito-UserPool-Groups",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": [
+				{
+					"category": "auth",
+					"resourceName": "edify041bfe5e",
+					"attributes": [
+						"UserPoolId",
+						"AppClientIDWeb",
+						"AppClientID",
+						"IdentityPoolId"
+					]
+				}
+			]
+		}
+	},
+	"api": {
+		"edify": {
+			"service": "AppSync",
+			"providerPlugin": "awscloudformation",
+			"output": {
+				"authConfig": {
+					"additionalAuthenticationProviders": [],
+					"defaultAuthentication": {
+						"authenticationType": "AMAZON_COGNITO_USER_POOLS",
+						"userPoolConfig": {
+							"userPoolId": "authedify041bfe5e"
+						}
+					}
+				}
+			}
 		}
 	}
 }

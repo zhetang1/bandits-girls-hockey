@@ -10,6 +10,16 @@
             "StackName": "amplify-edify-dev-145703",
             "StackId": "arn:aws:cloudformation:us-east-1:343680002692:stack/amplify-edify-dev-145703/7ad3c970-c471-11ea-bf0a-0af228e676ce",
             "AmplifyAppId": "d4kvaahmpdqou"
+        },
+        "categories": {
+            "auth": {
+                "edify041bfe5e": {}
+            },
+            "video": {
+                "myvodstreams": {
+                    "s3UUID": "vmkn89q2"
+                }
+            }
         }
     }
 }
